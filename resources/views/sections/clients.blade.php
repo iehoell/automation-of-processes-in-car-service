@@ -33,14 +33,14 @@
                     <td>{{$client->Discount_on_services}}</td>
                     <td>{{$client->Discount_on_spare_parts}}</td>
                     <td>
-                        <a href="/AoPiCS/clients/{{$client->id}}/edit">
+                        <a href="/AoPiCS/clients/{{$client->id}}/edit" class="delete_and_edit_buttons">
                             <button>
                                 <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782.png" width="20px" height="20px">
                             </button>
                         </a>
                     </td>
                     <td>
-                        <a href="/AoPiCS/clients/{{$client->id}}/deleteEntry">
+                        <a href="/AoPiCS/clients/{{$client->id}}/deleteEntry" class="delete_and_edit_buttons">
                             <button>
                                 <img src="https://cdn.icon-icons.com/icons2/1893/PNG/512/dustbin_120823.png" width="20px" height="20px">
                             </button>

@@ -63,10 +63,4 @@ class ClientController extends Controller
         DB::table('clients')->where('id', '=', $client)->delete();
         return redirect('../AoPiCS/clients');
     }
-
-//    public function delete($client)
-//    {
-//        return view('/delete');
-//    }
-
 }

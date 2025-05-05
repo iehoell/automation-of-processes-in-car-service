@@ -90,8 +90,12 @@
         .storageBlock__header {
             display: flex;
             justify-content: space-between;
-
-            .storageBlock__addNewClient {
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+                margin-top: 1%;
+            }:hover{cursor: pointer}
+            .storageBlock__addNewDelivery{
                 margin-top: 1%;
                 width: 40px;
                 height: 40px;
@@ -204,6 +208,8 @@
         text-decoration: none;
         color: #FFFFFF;
     }
+    .delete_and_edit_buttons{
+    }:hover{cursor: pointer;}
 </style>
 <body>
     <div class="mainContainer">
