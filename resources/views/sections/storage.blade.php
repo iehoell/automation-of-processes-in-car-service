@@ -20,25 +20,27 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>11333</td>
-                <td>DELIVERY</td>
-                <td>03.05.2025</td>
-                <td>022-111</td>
-                <td>1488</td>
-                <td>69420P</td>
-                <td>
-                    <button>
-                        <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782.png" width="20px" height="20px">
-                    </button>
-                </td>
-                <td>
-                    <button>
-                        <img src="https://cdn.icon-icons.com/icons2/1893/PNG/512/dustbin_120823.png" width="20px" height="20px">
-                    </button>
-                </td>
-            </tr>
+            @foreach($storage as $storage_item)
+                <tr>
+                    <td>{{$storage_item->id}}</td>
+                    <td>{{$storage_item->supplier}}</td>
+                    <td>{{$storage_item->date_of_receipt}}</td>
+                    <td>{{$storage_item->subdivision}}</td>
+                    <td>{{$storage_item->number_of_positions}}</td>
+                    <td>{{$storage_item->receipt_amount}}</td>
+                    <td>{{$storage_item->receipt_number}}</td>
+                    <td>
+                        <button>
+                            <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782.png" width="20px" height="20px">
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            <img src="https://cdn.icon-icons.com/icons2/1893/PNG/512/dustbin_120823.png" width="20px" height="20px">
+                        </button>
+                    </td>
+                </tr>
+            @endforeach
         </table>
     </div>
 @endsection

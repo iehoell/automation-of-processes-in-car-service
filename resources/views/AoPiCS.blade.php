@@ -70,6 +70,11 @@
         .clientsBlock__header{
             display: flex;
             justify-content: space-between;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+                margin-top: 1%;
+            }:hover{cursor: pointer}
             .clientsBlock__addNewClient{
                 margin-top: 1%;
                 width: 40px;

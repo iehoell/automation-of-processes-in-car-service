@@ -1,0 +1,52 @@
+@extends('AoPiCS')
+@section('content')
+    <style>
+        .mainContainer1{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            padding: 20px;
+            border: 1px solid lightgrey;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5%;
+        }
+        input{
+            border: 1px solid lightgrey;
+            margin-top: 2%;
+            width: 300px;
+            padding: 13px;
+            border-radius: 10px;
+        }
+        button{
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            padding: 13px;
+            width: 100%;
+        }
+        button:hover{
+            cursor: pointer;
+            color: white;
+            background: #E7772E;
+        }
+    </style>
+    <div class="mainContainer1">
+        <form action="editEntry" method="POST">
+            @csrf
+            <h3>Форма изменения записи</h3>
+            <input type="number" name="id" placeholder="ID" value='{{$client->id}}'/>
+            <input type="text" name="FIO" placeholder="Фио" value='{{$client->FIO}}'/>
+            <input type="text" name="Auto" placeholder="Автомобиль" value='{{$client->Auto}}'/>
+            <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$client->Auto_number}}'/>
+            <input type="date" name="Registration_date" placeholder="Дата регистрации" value='{{$client->Registration_date}}'/>
+            <input type="number" name="Telephone_number" placeholder="Номер телефона" value='{{$client->Telephone_number}}'/>
+            <input type="number" name="Discount_on_services" placeholder="Скидка на услуги" value='{{$client->Discount_on_services}}'/>
+            <input type="number" name="Discount_on_spare_parts" placeholder="Скидка на запчасти" value='{{$client->Discount_on_spare_parts}}'/>
+            <p></p>
+            <button type="submit">
+                Изменить
+            </button>
+        </form>
+    </div>
+@endsection
