@@ -39,10 +39,9 @@
             <input type="text" name="FIO" placeholder="Фио"/>
             <input type="text" name="Auto" placeholder="Автомобиль"/>
             <input type="text" name="Auto_number" placeholder="Номер автомобиля"/>
-            <input type="date" name="Registration_date" placeholder="Дата регистрации"/>
-            <input type="tel" name="Telephone_number" placeholder="Номер телефона"/>
-            <input type="number" name="Discount_on_services" placeholder="Скидка на услуги"/>
-            <input type="number" name="Discount_on_spare_parts" placeholder="Скидка на запчасти"/>
+            <input type="number" name="total" placeholder="Общая сумма"/>
+            <input type="number" name="deal_number" placeholder="Номер сделки"/>
+            <input type="number" name="column_number" placeholder="Номер колонки"/>
             <p></p>
             <button type="submit">
                 Добавить

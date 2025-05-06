@@ -35,6 +35,16 @@
     .mainContainer__content{
         .mainContainer__content__tasksBlock{
             margin-left: 5%;
+            .tasksBlock__flex{
+                display: flex;
+                justify-content: space-between;
+                .tasksBlock__addNewTask{
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 20px;
+                    margin-right: 70px;
+                }
+            }
             .tasksBlock__titles{
                 display: flex;
                 h4{
@@ -52,6 +62,12 @@
                     width: 160px;
                     margin-right: 20px;
                     padding-left: 15px;
+                    .tasksItem__buttons{
+                        display: flex;
+                        justify-content: space-around;
+                        margin-right: 5%;
+                        margin-bottom: 5%;
+                    }
                 }
             }
         }

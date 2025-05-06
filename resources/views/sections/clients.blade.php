@@ -30,8 +30,8 @@
                     <td>{{$client->Auto_number}}</td>
                     <td>{{$client->Registration_date}}</td>
                     <td>{{$client->Telephone_number}}</td>
-                    <td>{{$client->Discount_on_services}}</td>
-                    <td>{{$client->Discount_on_spare_parts}}</td>
+                    <td>{{$client->Discount_on_services}}%</td>
+                    <td>{{$client->Discount_on_spare_parts}}%</td>
                     <td>
                         <a href="/AoPiCS/clients/{{$client->id}}/edit" class="delete_and_edit_buttons">
                             <button>

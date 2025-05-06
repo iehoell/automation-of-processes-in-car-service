@@ -29,8 +29,8 @@
                     <td>{{$delivery->supplier}}</td>
                     <td>{{$delivery->date_of_receipt}}</td>
                     <td>{{$delivery->number_of_positions}}</td>
-                    <td>{{$delivery->receipt_amount}}</td>
                     <td>{{$delivery->receipt_number}}</td>
+                    <td>{{$delivery->receipt_amount}}₽</td>
                     <td>
                         <a href="/AoPiCS/storage/{{$delivery->id}}/edit" class="delete_and_edit_buttons">
                             <button>

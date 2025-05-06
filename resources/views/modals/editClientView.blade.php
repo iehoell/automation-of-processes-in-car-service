@@ -40,7 +40,7 @@
             <input type="text" name="Auto" placeholder="Автомобиль" value='{{$client->Auto}}'/>
             <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$client->Auto_number}}'/>
             <input type="date" name="Registration_date" placeholder="Дата регистрации" value='{{$client->Registration_date}}'/>
-            <input type="number" name="Telephone_number" placeholder="Номер телефона" value='{{$client->Telephone_number}}'/>
+            <input type="tel" name="Telephone_number" placeholder="Номер телефона" value='{{$client->Telephone_number}}'/>
             <input type="number" name="Discount_on_services" placeholder="Скидка на услуги" value='{{$client->Discount_on_services}}'/>
             <input type="number" name="Discount_on_spare_parts" placeholder="Скидка на запчасти" value='{{$client->Discount_on_spare_parts}}'/>
             <p></p>

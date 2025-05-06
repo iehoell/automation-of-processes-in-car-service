@@ -9,6 +9,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/signupformaintenance', function () {
+    return view('signUpForMaintenance');
+});
+
+Route::get('/profile', function () {
+    return view('userProfile');
+});
+
 Route::get('/AoPiCS', function () {
     return view('AoPiCS');
 });
@@ -20,18 +28,6 @@ Route::get('/AoPiCS/dealsList', function () {
 Route::get('/AoPiCS/dealsList/deals', function () {
     return view('../sections/deals');
 });
-
-//Route::get('/AoPiCS/clients', function () {
-//    return view('../sections/clients');
-//});
-
-//Route::get('/AoPiCS/storage', function () {
-//    return view('../sections/storage');
-//});
-
-//Route::get('/AoPiCS/tasks', function () {
-//    return view('../sections/tasks');
-//});
 
 //Clients
 Route::get('/AoPiCS/clients', [ClientController::class, 'showAll'])->name('clients.showAll');
@@ -51,3 +47,8 @@ Route::post('/AoPiCS/storage/{delivery}/editEntry', [StorageController::class, '
 
 //Tasks
 Route::get('/AoPiCS/tasks', [TasksController::class, 'showAll'])->name('tasks.showAll');
+Route::get('/AoPiCS/tasks/addNewTask', [TasksController::class, 'addNewTask'])->name('tasks.addNewTask');
+Route::post('/AoPiCS/tasks/add', [TasksController::class, 'store'])->name('tasks.store');
+Route::get('/AoPiCS/tasks/{task}/deleteEntry', [TasksController::class, 'deleteEntry'])->name('tasks.deleteEntry');
+Route::get('/AoPiCS/tasks/{task}/edit', [TasksController::class, 'edit'])->name('tasks.edit');
+Route::post('/AoPiCS/tasks/{task}/editEntry', [TasksController::class, 'editEntry'])->name('tasks.editEntry');

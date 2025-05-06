@@ -32,20 +32,19 @@
         }
     </style>
     <div class="mainContainer1">
-        <form action="add" method="POST">
+        <form action="editEntry" method="POST">
             @csrf
-            <h3>Форма создания новой записи</h3>
-            <input type="number" name="id" placeholder="ID"/>
-            <input type="text" name="FIO" placeholder="Фио"/>
-            <input type="text" name="Auto" placeholder="Автомобиль"/>
-            <input type="text" name="Auto_number" placeholder="Номер автомобиля"/>
-            <input type="date" name="Registration_date" placeholder="Дата регистрации"/>
-            <input type="tel" name="Telephone_number" placeholder="Номер телефона"/>
-            <input type="number" name="Discount_on_services" placeholder="Скидка на услуги"/>
-            <input type="number" name="Discount_on_spare_parts" placeholder="Скидка на запчасти"/>
+            <h3>Форма изменения записи</h3>
+            <input type="number" name="id" placeholder="ID" value='{{$task->id}}'/>
+            <input type="text" name="FIO" placeholder="ФИО" value='{{$task->FIO}}'/>
+            <input type="text" name="Auto" placeholder="Автомобиль" value='{{$task->Auto}}'/>
+            <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$task->Auto_number}}'/>
+            <input type="number" name="total" placeholder="Общая сумма" value='{{$task->total}}'/>
+            <input type="number" name="deal_number" placeholder="Номер сделки" value='{{$task->deal_number}}'/>
+            <input type="number" name="column_number" placeholder="Номер колонки" value='{{$task->column_number}}'/>
             <p></p>
             <button type="submit">
-                Добавить
+                Изменить
             </button>
         </form>
     </div>
