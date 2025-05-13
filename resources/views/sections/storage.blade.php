@@ -13,10 +13,9 @@
         <table>
             <tr>
                 <td>№</td>
-                <td>Номер поступления</td>
+                <td>Название</td>
                 <td>Поставщик</td>
                 <td>Дата поступления</td>
-                <td>Подразделение</td>
                 <td>Количество позиций</td>
                 <td>Сумма поступления</td>
                 <td></td>
@@ -25,11 +24,10 @@
             @foreach($storage as $delivery)
                 <tr>
                     <td>{{$delivery->id}}</td>
-                    <td>{{$delivery->subdivision}}</td>
+                    <td>{{$delivery->name}}</td>
                     <td>{{$delivery->supplier}}</td>
                     <td>{{$delivery->date_of_receipt}}</td>
                     <td>{{$delivery->number_of_positions}}</td>
-                    <td>{{$delivery->receipt_number}}</td>
                     <td>{{$delivery->receipt_amount}}₽</td>
                     <td>
                         <a href="/AoPiCS/storage/{{$delivery->id}}/edit" class="delete_and_edit_buttons">

@@ -21,12 +21,10 @@ class StorageController extends Controller
     public function store(Request $request)
     {
         DB::table('storage')->insert([
-            'id' => $request->id,
             'supplier' => $request->supplier,
             'date_of_receipt' => $request->date_of_receipt,
-            'subdivision' => $request->subdivision,
+            'name' => $request->name,
             'number_of_positions' => $request->number_of_positions,
-            'receipt_number' => $request->receipt_number,
             'receipt_amount' => $request->receipt_amount,
         ]);
         return redirect('../AoPiCS/storage');
@@ -44,12 +42,10 @@ class StorageController extends Controller
             ->where('id', '=', $delivery)
             ->update(
                 [
-                    'id' => $request->id,
                     'supplier' => $request->supplier,
                     'date_of_receipt' => $request->date_of_receipt,
-                    'subdivision' => $request->subdivision,
+                    'name' => $request->name,
                     'number_of_positions' => $request->number_of_positions,
-                    'receipt_number' => $request->receipt_number,
                     'receipt_amount' => $request->receipt_amount,
                 ]
             );

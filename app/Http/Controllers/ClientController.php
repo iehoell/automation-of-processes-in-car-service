@@ -21,7 +21,6 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         DB::table('clients')->insert([
-            'id' => $request->id,
             'FIO' => $request->FIO,
             'Auto' => $request->Auto,
             'Auto_number' => $request->Auto_number,
@@ -45,7 +44,6 @@ class ClientController extends Controller
             ->where('id', '=', $client)
             ->update(
                 [
-                    'id' => $request->id,
                     'FIO' => $request->FIO,
                     'Auto' => $request->Auto,
                     'Auto_number' => $request->Auto_number,

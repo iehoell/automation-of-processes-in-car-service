@@ -35,12 +35,10 @@
         <form action="add" method="POST">
             @csrf
             <h3>Форма создания новой записи</h3>
-            <input type="number" name="id" placeholder="ID"/>
             <input type="text" name="supplier" placeholder="Поставщик"/>
             <input type="date" name="date_of_receipt" placeholder="Дата поступления"/>
-            <input type="number" name="subdivision" placeholder="Подразделение"/>
+            <input type="text" name="name" placeholder="Название"/>
             <input type="number" name="number_of_positions" placeholder="Количество позиций"/>
-            <input type="number" name="receipt_number" placeholder="Номер поступления"/>
             <input type="number" name="receipt_amount" placeholder="Сумма поступления"/>
             <p></p>
             <button type="submit">

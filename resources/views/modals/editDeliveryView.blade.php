@@ -35,12 +35,10 @@
         <form action="editEntry" method="POST">
             @csrf
             <h3>Форма изменения записи</h3>
-            <input type="number" name="id" placeholder="ID" value='{{$delivery->id}}'/>
             <input type="text" name="supplier" placeholder="Поставщик" value='{{$delivery->supplier}}'/>
             <input type="date" name="date_of_receipt" placeholder="Дата поступления" value='{{$delivery->date_of_receipt}}'/>
-            <input type="number" name="subdivision" placeholder="Подразделение" value='{{$delivery->subdivision}}'/>
+            <input type="text" name="name" placeholder="Подразделение" value='{{$delivery->name}}'/>
             <input type="number" name="number_of_positions" placeholder="Количество позиций" value='{{$delivery->number_of_positions}}'/>
-            <input type="number" name="receipt_number" placeholder="Номер поступления" value='{{$delivery->receipt_number}}'/>
             <input type="number" name="receipt_amount" placeholder="Сумма поступления" value='{{$delivery->receipt_amount}}'/>
             <p></p>
             <button type="submit">

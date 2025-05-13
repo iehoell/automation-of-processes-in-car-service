@@ -35,7 +35,6 @@
         <form action="add" method="POST">
             @csrf
             <h3>Форма создания новой записи</h3>
-            <input type="number" name="id" placeholder="ID"/>
             <input type="text" name="FIO" placeholder="Фио"/>
             <input type="text" name="Auto" placeholder="Автомобиль"/>
             <input type="text" name="Auto_number" placeholder="Номер автомобиля"/>

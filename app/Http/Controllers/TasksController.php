@@ -21,7 +21,6 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         DB::table('tasks')->insert([
-            'id' => $request->id,
             'FIO' => $request->FIO,
             'Auto' => $request->Auto,
             'Auto_number' => $request->Auto_number,
@@ -44,7 +43,6 @@ class TasksController extends Controller
             ->where('id', '=', $task)
             ->update(
                 [
-                    'id' => $request->id,
                     'FIO' => $request->FIO,
                     'Auto' => $request->Auto,
                     'Auto_number' => $request->Auto_number,

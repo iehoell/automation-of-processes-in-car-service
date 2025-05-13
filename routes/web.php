@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\StorageController;
 use App\Http\Controllers\TasksController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,6 +31,17 @@ Route::get('/AoPiCS/dealsList/deals', function () {
     return view('../sections/deals');
 });
 
+Route::get('/registration', function () {
+    return view('registration');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+//Registration & Login
+Route::post('/registration/add', [RegistrationController::class, 'store'])->name('store');
+Route::post('/login/login', [LoginController::class, 'login'])->name('login');
 //Clients
 Route::get('/AoPiCS/clients', [ClientController::class, 'showAll'])->name('clients.showAll');
 Route::get('/AoPiCS/clients/addNewClient', [ClientController::class, 'addNewClient'])->name('clients.addNewClient');

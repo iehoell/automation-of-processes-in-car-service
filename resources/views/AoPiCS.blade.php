@@ -23,8 +23,9 @@
                 text-align: center;
                 padding-top: 12%;
                 padding-bottom: 12%;
-            }:hover{
-            background: #2d3748;cursor: pointer;}
+            }
+            .mainContainer__menu__menuItem:hover{
+                background: #ff3700;cursor: pointer;}
         }
         .mainContainer__content{
             background: #FFFFFF;
@@ -230,15 +231,12 @@
 <body>
     <div class="mainContainer">
         <div class="mainContainer__menu">
-            <h2>AoPiCS</h2>
+            <h2 class="ioio">AoPiCS</h2>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/dealsList" class="links">Сделки</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/tasks" class="links">Задачи</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/storage" class="links">Склад</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/clients" class="links">Клиенты</a></h4></div>
-            <div class="mainContainer__menu__menuItem"><h4>Аналитика !</h4></div>
-            <div class="mainContainer__menu__menuItem"><h4>Настройки !</h4></div>
-            <div class="mainContainer__menu__menuItem"><h4>Учёт !</h4></div>
-            <div class="mainContainer__menu__menuItem"><h4>Календарь !</h4></div>
+            <div class="mainContainer__menu__menuItem"><h4>Календарь</h4></div>
         </div>
         <div class="mainContainer__content">
             @yield('content')

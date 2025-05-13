@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Запись на техосмотр</title>
 </head>
+    <script>
+        function myfunction(){
+            location.href='/profile';
+            alert('Вы успешно записались на техосмотр!');
+        }
+    </script>
     <style>
         .mainContainer1{
             display: flex;
@@ -57,8 +63,8 @@
             <h4>Время записи</h4>
             <input type="datetime-local" name="recording_date"/>
             <p></p>
-            <button type="submit">
-                Записаться redirect to личный кабинет с алертом о записи
+            <button type="submit" onclick="myfunction()">
+                Записаться на техосмотр
             </button>
         </form>
     </div>

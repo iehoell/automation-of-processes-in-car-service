@@ -35,7 +35,6 @@
         <form action="editEntry" method="POST">
             @csrf
             <h3>Форма изменения записи</h3>
-            <input type="number" name="id" placeholder="ID" value='{{$task->id}}'/>
             <input type="text" name="FIO" placeholder="ФИО" value='{{$task->FIO}}'/>
             <input type="text" name="Auto" placeholder="Автомобиль" value='{{$task->Auto}}'/>
             <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$task->Auto_number}}'/>

@@ -298,6 +298,7 @@
             <a class='navMenu__navMenuItem' href='/#advantages'>Преимущества</a>
             <a class='navMenu__navMenuItem' href='/#contacts'>Контакты</a>
             <a class='navMenu__navMenuItem' href='/AoPiCS'>AoPiCS</a>
+            <a class='navMenu__navMenuItem' href="/profile">Личный кабинет</a>
         </div>
         <div class='header__icons'>
             <a href='/shoppingCart'>
@@ -314,7 +315,6 @@
 
 
 <div class="content">
-
     <div class="services" id="services">
         <div class="services__element">
             <h2>Auto repair</h2>
