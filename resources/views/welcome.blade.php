@@ -297,8 +297,7 @@
             <a class='navMenu__navMenuItem' href='/#services'>Услуги</a>
             <a class='navMenu__navMenuItem' href='/#advantages'>Преимущества</a>
             <a class='navMenu__navMenuItem' href='/#contacts'>Контакты</a>
-            <a class='navMenu__navMenuItem' href='/AoPiCS'>AoPiCS</a>
-            <a class='navMenu__navMenuItem' href="/profile">Личный кабинет</a>
+            <a class='navMenu__navMenuItem' href="/login">Личный кабинет</a>
         </div>
         <div class='header__icons'>
             <a href='/shoppingCart'>

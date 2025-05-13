@@ -61,7 +61,7 @@
             <h4>Номер телефона</h4>
             <input type="tel" name="phone_number"/>
             <h4>Время записи</h4>
-            <input type="datetime-local" name="recording_date"/>
+            <input type="datetime-local" name="recording_date" max="2026-06-24T00:00"/>
             <p></p>
             <button type="submit" onclick="myfunction()">
                 Записаться на техосмотр

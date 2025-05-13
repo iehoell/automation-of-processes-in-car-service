@@ -37,6 +37,16 @@
         color: white;
         background: #E7772E;
     }
+    .toRegistrationLink{
+        margin-top: 10%;
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: #E7772E;
+        width: 90%;
+    }
+    .toRegistrationLink:hover{
+        border-bottom: 1px solid #E7772E;
+         }
 </style>
     <body>
         <div class="mainContainer1">
@@ -45,7 +55,7 @@
                 <h3>Войти</h3>
                 <input type="email" name="email" placeholder="Электронная почта"/>
                 <input type="password" name="password" placeholder="Пароль"/>
-                <p></p>
+                <a href="/registration" class="toRegistrationLink">Нет аккаунта? Зарегистрируйте его сейчас.</a>
                 <button type="submit">
                     Войти
                 </button>

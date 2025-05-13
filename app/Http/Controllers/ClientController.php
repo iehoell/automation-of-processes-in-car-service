@@ -61,4 +61,10 @@ class ClientController extends Controller
         DB::table('clients')->where('id', '=', $client)->delete();
         return redirect('../AoPiCS/clients');
     }
+
+    public function search(Request $request){
+        $query = $request->input('search-text');
+        $clients = DB::table('clients')->where('FIO', 'like', '%' . $query . '%')->get();
+        return view('../sections/clients', ['clients' => $clients]);
+    }
 }

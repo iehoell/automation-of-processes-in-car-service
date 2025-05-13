@@ -2,7 +2,18 @@
 
 @section('content')
     <div class="mainContainer__content__dealsList">
-        <h2>Сделки</h2>
+        <div class="dealsListBlock__header">
+            <h2>Список сделок</h2>
+            <form role="search" method="get" action="AoPiCS/dealsList/search" class="search">
+                <input type="search" name="search-text" />
+                <button>Найти</button>
+            </form>
+            <a href="/AoPiCS/dealsList/addNewDeal">
+                <button class="dealsListBlock__addNewDeal">
+                    +
+                </button>
+            </a>
+        </div>
         <table>
             <tr class="titleRow">
                 <td>Номер сделки</td>

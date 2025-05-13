@@ -41,7 +41,7 @@
         }
         .mainContainer__profile{
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             .input-box {
                 /* родительский блок относительно которого будем формировать положение
                 тега label */
@@ -131,10 +131,6 @@
             <div class="mainContainer__profile">
                 @foreach($user_users as $current_user_users)
                     @foreach($user_clients as $current_user_clients)
-                        <div class="input-box">
-                            <label>Логин</label>
-                            <input type="text" value="user">
-                        </div>
                         <div class="input-box">
                             <label>Автомобиль</label>
                             <input type="text"  value="{{$current_user_clients->Auto}}">

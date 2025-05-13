@@ -57,4 +57,10 @@ class StorageController extends Controller
         DB::table('storage')->where('id', '=', $delivery)->delete();
         return redirect('../AoPiCS/storage');
     }
+
+    public function search(Request $request){
+        $query = $request->input('search-text');
+        $storage = DB::table('storage')->where('name', 'like', '%' . $query . '%')->get();
+        return view('../sections/storage', ['storage' => $storage]);
+    }
 }

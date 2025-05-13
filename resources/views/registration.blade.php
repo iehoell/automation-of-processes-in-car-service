@@ -37,6 +37,16 @@
             color: white;
             background: #E7772E;
         }
+        .toLoginLink{
+            margin-top: 10%;
+            margin-bottom: 5%;
+            text-decoration: none;
+            color: #E7772E;
+            width: 74%;
+        }
+        .toLoginLink:hover{
+            border-bottom: 1px solid #E7772E;
+        }
     </style>
     <body>
         <div class="mainContainer1">
@@ -49,7 +59,7 @@
                 <input type="tel" name="phone" placeholder="Номер телефона"/>
                 <input type="text" name="Auto" placeholder="Автомобиль"/>
                 <input type="text" name="Auto_number" placeholder="Гос номер"/>
-                <p></p>
+                <a href="/login" class="toLoginLink">Уже есть аккаунт? Войдите сейчас.</a>
                 <button type="submit">
                     Зарегистрироваться
                 </button>

@@ -208,6 +208,17 @@
     .mainContainer__content__dealsList{
         margin-left: 5%;
         margin-right: 5%;
+        .dealsListBlock__header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .dealsListBlock__addNewDeal{
+            margin-top: 25%;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            font-size: 20px;
+        }
         table{
             width: 100%;
             border-bottom: 1px solid lightgrey;
@@ -227,6 +238,17 @@
     }
     .delete_and_edit_buttons{
     }:hover{cursor: pointer;}
+    .search{
+        margin-top: 2%;
+        input{
+            border-radius: 5px;
+        }
+        button:hover{
+            border-radius: 5px;
+            color: #FFFFFF;
+            background: #E7772E;
+        }
+    }
 </style>
 <body>
     <div class="mainContainer">

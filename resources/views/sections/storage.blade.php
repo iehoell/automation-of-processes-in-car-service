@@ -4,6 +4,10 @@
     <div class="mainContainer__content__storageBlock">
         <div class="storageBlock__header">
             <h2>Список запчастей</h2>
+            <form role="search" method="get" action="/search" class="search">
+                <input type="search" name="search-text" />
+                <button>Найти</button>
+            </form>
             <a href="/AoPiCS/storage/addNewDelivery">
                 <button class="storageBlock__addNewDelivery">
                     +

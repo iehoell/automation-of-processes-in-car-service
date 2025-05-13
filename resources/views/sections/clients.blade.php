@@ -3,6 +3,10 @@
     <div class="mainContainer__content__clientsBlock">
         <div class="clientsBlock__header">
             <h2>Список клиентов</h2>
+            <form role="search" method="get" action="/AoPiCS/clients/search" class="search">
+                <input type="search" name="search-text" />
+                <button>Найти</button>
+            </form>
             <a href="/AoPiCS/clients/addNewClient">
                 <button class="clientsBlock__addNewClient">
                     +

@@ -6,6 +6,7 @@ use App\Http\Controllers\StorageController;
 use App\Http\Controllers\TasksController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DealsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -49,6 +50,7 @@ Route::post('/AoPiCS/clients/add', [ClientController::class, 'store'])->name('cl
 Route::get('/AoPiCS/clients/{client}/deleteEntry', [ClientController::class, 'deleteEntry'])->name('client.deleteEntry');
 Route::get('/AoPiCS/clients/{client}/edit', [ClientController::class, 'edit'])->name('clients.edit');
 Route::post('/AoPiCS/clients/{client}/editEntry', [ClientController::class, 'editEntry'])->name('clients.editEntry');
+Route::get('/AoPiCS/clients/search', [ClientController::class, 'search'])->name('clients.search');
 
 //Storage
 Route::get('/AoPiCS/storage', [StorageController::class, 'showAll'])->name('storage.showAll');
@@ -57,6 +59,7 @@ Route::post('/AoPiCS/storage/add', [StorageController::class, 'store'])->name('s
 Route::get('/AoPiCS/storage/{delivery}/deleteEntry', [StorageController::class, 'deleteEntry'])->name('storage.deleteEntry');
 Route::get('/AoPiCS/storage/{delivery}/edit', [StorageController::class, 'edit'])->name('storage.edit');
 Route::post('/AoPiCS/storage/{delivery}/editEntry', [StorageController::class, 'editEntry'])->name('storage.editEntry');
+Route::get('/AoPiCS/storage/search', [StorageController::class, 'search'])->name('storage.search');
 
 //Tasks
 Route::get('/AoPiCS/tasks', [TasksController::class, 'showAll'])->name('tasks.showAll');
@@ -65,3 +68,5 @@ Route::post('/AoPiCS/tasks/add', [TasksController::class, 'store'])->name('tasks
 Route::get('/AoPiCS/tasks/{task}/deleteEntry', [TasksController::class, 'deleteEntry'])->name('tasks.deleteEntry');
 Route::get('/AoPiCS/tasks/{task}/edit', [TasksController::class, 'edit'])->name('tasks.edit');
 Route::post('/AoPiCS/tasks/{task}/editEntry', [TasksController::class, 'editEntry'])->name('tasks.editEntry');
+//Deals
+Route::get('/AoPiCS/dealsList/search', [DealsController::class, 'search'])->name('deals.search');
