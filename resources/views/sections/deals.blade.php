@@ -15,8 +15,7 @@
             </div>
             <div class="dealsBlock__clientBlock__sale">
                 <p>На запчасти: 0%</p>
-                <p>На рыботы: 0%</p>
-                <p>Кэшбек: 0</p>
+                <p>На работы: 0%</p>
             </div>
             <div class="dealsBlock__clientBlock__auto">
                 <h4>Mercedes CLS63 AMG 4-Matic</h4>
@@ -30,9 +29,7 @@
                     <td>Наименование</td>
                     <td>Исполнитель</td>
                     <td>Норма времени</td>
-                    <td>Без скидки</td>
-                    <td>Скидка</td>
-                    <td>Стоимость</td>
+                    <td>Итого</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -41,8 +38,6 @@
                     <td>Замена сальника привода</td>
                     <td>Кислов Анатолий</td>
                     <td>1 час(-ов)</td>
-                    <td>1000₽</td>
-                    <td>50₽</td>
                     <td>950₽</td>
                     <td>
                         <button>
@@ -69,9 +64,8 @@
                     <td>№</td>
                     <td>Наименование</td>
                     <td>Кол-во</td>
-                    <td>Ср. цена продажи</td>
-                    <td>Ср. Цена закупки</td>
-                    <td>В каталоге</td>
+                    <td>Цена закупки</td>
+                    <td>Цена продажи</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -82,7 +76,6 @@
                     <td>4</td>
                     <td>6400</td>
                     <td>4400</td>
-                    <td>+</td>
                     <td>
                         <button>
                             <img src="https://cdn-icons-png.flaticon.com/512/61/61099.png" width="20px" height="20px">

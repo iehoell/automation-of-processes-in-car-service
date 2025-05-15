@@ -1,3 +1,8 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -129,26 +134,22 @@
         <div class="mainContainer">
             <h1>Личный кабинет</h1>
             <div class="mainContainer__profile">
-                @foreach($user_users as $current_user_users)
-                    @foreach($user_clients as $current_user_clients)
-                        <div class="input-box">
-                            <label>Автомобиль</label>
-                            <input type="text"  value="{{$current_user_clients->Auto}}">
-                        </div>
-                        <div class="input-box">
-                            <label>Гос. номер</label>
-                            <input type="text"  value="{{$current_user_clients->Auto_number}}">
-                        </div>
-                        <div class="input-box">
-                            <label>Номер телефона</label>
-                            <input type="text"  value="{{$current_user_clients->Telephone_number}}">
-                        </div>
-                        <div class="input-box">
-                            <label>Электронная почта</label>
-                            <input type="text" value="{{$current_user_users->email}}">
-                        </div>
-                    @endforeach
-                @endforeach
+                <div class="input-box">
+                    <label>Автомобиль</label>
+                    <input type="text"  value="{{$_SESSION['auto']}}">
+                </div>
+                <div class="input-box">
+                    <label>Гос. номер</label>
+                    <input type="text"  value="{{$_SESSION['auto_number']}}">
+                </div>
+                <div class="input-box">
+                    <label>Номер телефона</label>
+                    <input type="text"  value="{{$_SESSION['telephone_number']}}">
+                </div>
+                <div class="input-box">
+                    <label>Электронная почта</label>
+                    <input type="text" value="{{$_SESSION['email']}}">
+                </div>
             </div>
             <div class="mainContainer__currentRecord">
                 <h2>Ваша запись</h2>

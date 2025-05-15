@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+session_start();
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,16 +15,29 @@ class LoginController extends Controller
         $password = $request->password;
         $name1 = DB::table('users')->where('email', '=', $email)->get('name');
         $name2 = $name1->first()->name;
-        $user_users = DB::table('users')->where('email', '=', $email)->get();
         $user_clients = DB::table('clients')->where('FIO', '=', $name2)->get();
         $hash = DB::table('users')->where('email', '=', $email)->get('password');
         $is_admin = DB::table('users')->where('email', '=', $email)->get('is_admin');
         if(password_verify($password, $hash->first()->password)){
             if($is_admin->first()->is_admin === true){
-                return redirect('/AoPiCS');
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['auto'] = $user_clients->value('Auto');
+                    $_SESSION['auto_number'] = $user_clients->value('Auto_number');
+                    $_SESSION['telephone_number'] = $user_clients->value('Telephone_number');
+                    return view('/AoPiCS');
+                }
             }
             else{
-                return view('/userProfile', ['user_users' => $user_users, 'user_clients' => $user_clients]);
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $_SESSION['email'] = $email;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['auto'] = $user_clients->value('Auto');
+                    $_SESSION['auto_number'] = $user_clients->value('Auto_number');
+                    $_SESSION['telephone_number'] = $user_clients->value('Telephone_number');
+                    return view('/userProfile');
+                }
             }
         }
         else{
