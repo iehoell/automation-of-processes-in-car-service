@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,12 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Запись на техосмотр</title>
 </head>
-    <script>
-        function myfunction(){
-            location.href='/profile';
-            alert('Вы успешно записались на техосмотр!');
-        }
-    </script>
     <style>
         .mainContainer1{
             display: flex;
@@ -46,24 +45,36 @@
             margin-bottom: 5px;
             margin-top: 5px;
         }
+        select{
+            border-radius: 10px;
+            width: 101%;
+            padding: 10px;
+        }
     </style>
+    {{$tasks = DB::table('tasks')->get('work_name')}}
     <body>
     <div class="mainContainer1">
-        <form action="add" method="POST">
+        <form action="/signupformaintenance/add" method="POST">
             @csrf
             <h3>Введите свои данные, чтобы записаться на техосмотр</h3>
             <h4>ФИО</h4>
-            <input type="text" name="FIO"/>
+            <input type="text" name="FIO" value="{{$_SESSION['FIO']}}"/>
             <h4>Автомобиль</h4>
-            <input type="text" name="Auto" />
+            <input type="text" name="Auto" value="{{$_SESSION['auto']}}"/>
             <h4>Гос. номер автомобиля</h4>
-            <input type="text" name="Auto_number" maxlength="6" size="6"/>
+            <input type="text" name="Auto_number" maxlength="6" size="6" value="{{$_SESSION['auto_number']}}"/>
             <h4>Номер телефона</h4>
-            <input type="tel" name="phone_number"/>
+            <input type="tel" name="phone_number" value="{{$_SESSION['telephone_number']}}"/>
             <h4>Время записи</h4>
             <input type="datetime-local" name="recording_date" max="2026-06-24T00:00"/>
+            <h4>Тип работ</h4>
+            <select type="text" name="task_name">
+                @foreach($tasks as $task)
+                    <option>{{$task->work_name}}</option>
+                @endforeach
+            </select>
             <p></p>
-            <button type="submit" onclick="myfunction()">
+            <button type="submit">
                 Записаться на техосмотр
             </button>
         </form>

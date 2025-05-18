@@ -21,6 +21,7 @@ class LoginController extends Controller
         if(password_verify($password, $hash->first()->password)){
             if($is_admin->first()->is_admin === true){
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $_SESSION['FIO'] = $name2;
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $password;
                     $_SESSION['auto'] = $user_clients->value('Auto');
@@ -31,6 +32,7 @@ class LoginController extends Controller
             }
             else{
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $_SESSION['FIO'] = $name2;
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $password;
                     $_SESSION['auto'] = $user_clients->value('Auto');

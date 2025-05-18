@@ -153,7 +153,7 @@
             </div>
             <div class="mainContainer__currentRecord">
                 <h2>Ваша запись</h2>
-                <div class="mainContainer__currentRecordText">Сегодня в 10:50</div>
+                <div class="mainContainer__currentRecordText">??? в ???</div>
             </div>
             <div class="mainContainer__history">
                 <h2>История сделок</h2>

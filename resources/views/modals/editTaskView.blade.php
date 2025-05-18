@@ -35,12 +35,12 @@
         <form action="editEntry" method="POST">
             @csrf
             <h3>Форма изменения записи</h3>
-            <input type="text" name="FIO" placeholder="ФИО" value='{{$task->FIO}}'/>
-            <input type="text" name="Auto" placeholder="Автомобиль" value='{{$task->Auto}}'/>
-            <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$task->Auto_number}}'/>
+            <input type="text" name="work_name" placeholder="Наименование работы" value='{{$task->work_name}}'/>
+            <input type="text" name="executor" placeholder="Исполнитель" value='{{$task->executor}}'/>
+            <input type="number" name="lead_time" placeholder="Время выполнения" value='{{$task->lead_time}}'/>
+            <input type="text" name="spare_parts" placeholder="Нужные для работы запчасти" value='{{$task->spare_parts}}'/>
+            <input type="number" name="number_of_spare_parts" placeholder="Кол-во запчастей" value='{{$task->number_of_spare_parts}}'/>
             <input type="number" name="total" placeholder="Общая сумма" value='{{$task->total}}'/>
-            <input type="number" name="deal_number" placeholder="Номер сделки" value='{{$task->deal_number}}'/>
-            <input type="number" name="column_number" placeholder="Номер колонки" value='{{$task->column_number}}'/>
             <p></p>
             <button type="submit">
                 Изменить

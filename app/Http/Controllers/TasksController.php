@@ -21,12 +21,12 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         DB::table('tasks')->insert([
-            'FIO' => $request->FIO,
-            'Auto' => $request->Auto,
-            'Auto_number' => $request->Auto_number,
+            'work_name' => $request->work_name,
+            'lead_time' => $request->lead_time,
+            'executor' => $request->executor,
+            'spare_parts' => $request->spare_parts,
+            'number_of_spare_parts' => $request->number_of_spare_parts,
             'total' => $request->total,
-            'deal_number' => $request->deal_number,
-            'column_number' => $request->column_number,
         ]);
         return redirect('../AoPiCS/tasks');
     }
@@ -43,12 +43,12 @@ class TasksController extends Controller
             ->where('id', '=', $task)
             ->update(
                 [
-                    'FIO' => $request->FIO,
-                    'Auto' => $request->Auto,
-                    'Auto_number' => $request->Auto_number,
+                    'work_name' => $request->work_name,
+                    'lead_time' => $request->lead_time,
+                    'executor' => $request->executor,
+                    'spare_parts' => $request->spare_parts,
+                    'number_of_spare_parts' => $request->number_of_spare_parts,
                     'total' => $request->total,
-                    'deal_number' => $request->deal_number,
-                    'column_number' => $request->column_number,
                 ]
             );
         return redirect('../AoPiCS/tasks');
@@ -58,5 +58,11 @@ class TasksController extends Controller
     {
         DB::table('tasks')->where('id', '=', $task)->delete();
         return redirect('../AoPiCS/tasks');
+    }
+
+    public function search(Request $request){
+        $query = $request->input('search-text');
+        $tasks = DB::table('tasks')->where('work_name', 'like', '%' . $query . '%')->get();
+        return view('../sections/tasks', ['tasks' => $tasks]);
     }
 }

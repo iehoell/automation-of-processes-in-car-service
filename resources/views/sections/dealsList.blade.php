@@ -17,16 +17,27 @@
         <table>
             <tr class="titleRow">
                 <td>Номер сделки</td>
+                <td>Наименование работы</td>
                 <td>Дата создания</td>
                 <td>Статус</td>
-                <td>Кем проведена</td>
+                <td>Исполнитель</td>
             </tr>
-            <tr>
-                <td><a href="/AoPiCS/dealsList/deals">228</a></td>
-                <td>03.05.2025</td>
-                <td>Выполнена</td>
-                <td>Кислицын Владимир</td>
-            </tr>
+            @foreach($dealsList as $deal)
+                <tr>
+                    <td><a href="/AoPiCS/dealsList/{{$deal->deal_number}}">{{$deal->deal_number}}</a></td>
+                    <td>{{$deal->tasks_work_name}}</td>
+                    <td>{{$deal->deal_creation_date}}</td>
+                    <td>{{$deal->deal_status}}</td>
+                    <td>{{$deal->tasks_executor}}</td>
+                    <td>
+                        <a href="/AoPiCS/dealsList/{{$deal->deal_number}}/deleteEntry" class="delete_and_edit_buttons">
+                            <button>
+                                <img src="https://cdn.icon-icons.com/icons2/1893/PNG/512/dustbin_120823.png" width="20px" height="20px">
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
         </table>
     </div>
 @endsection

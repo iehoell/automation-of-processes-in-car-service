@@ -14,7 +14,6 @@
         }
         input{
             border: 1px solid lightgrey;
-            margin-top: 2%;
             width: 300px;
             padding: 13px;
             border-radius: 10px;
@@ -30,17 +29,30 @@
             color: white;
             background: #E7772E;
         }
+        select{
+            border-radius: 10px;
+            padding: 10px;
+        }
     </style>
     <div class="mainContainer1">
         <form action="add" method="POST">
             @csrf
             <h3>Форма создания новой записи</h3>
-            <input type="text" name="work_name" placeholder="Наименование работы"/>
-            <input type="text" name="executor" placeholder="Исполнитель"/>
-            <input type="number" name="lead_time" placeholder="Время выполнения"/>
-            <input type="text" name="spare_parts" placeholder="Нужные для работы запчасти"/>
-            <input type="number" name="number_of_spare_parts" placeholder="Кол-во запчастей"/>
-            <input type="number" name="total" placeholder="Общая сумма"/>
+            <h4>ФИО клиента</h4>
+            <select type="text" name="clients_fio">
+                @foreach($clients as $client)
+                    <option>{{$client->FIO}}</option>
+                @endforeach
+            </select>
+            <h4>Наименование работы</h4>
+            <select type="text" name="tasks_work_name">
+                @foreach($tasks as $task)
+                    <option>{{$task->work_name}}</option>
+                @endforeach
+            </select>
+            <h4>Дата и время записи</h4>
+            <input type="date" name="deals_recording_date"/>
+            <input type="time" name="deals_recording_time"/>
             <p></p>
             <button type="submit">
                 Добавить

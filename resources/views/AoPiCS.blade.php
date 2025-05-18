@@ -43,7 +43,6 @@
                     width: 40px;
                     height: 40px;
                     margin-top: 20px;
-                    margin-right: 70px;
                 }
             }
             .tasksBlock__titles{
@@ -55,20 +54,14 @@
                 }
             }
             .tasksBlock__tasks{
-                display: flex;
-                .tasksBlock__tasks__tasksItem{
-                    border-radius: 15px;
-                    border: 1px solid lightgrey;
-                    height: max-content;
-                    width: 160px;
-                    margin-right: 20px;
-                    padding-left: 15px;
-                    .tasksItem__buttons{
-                        display: flex;
-                        justify-content: space-around;
-                        margin-right: 5%;
-                        margin-bottom: 5%;
-                    }
+                width: 100%;
+                table{
+                    border-spacing: 10px;
+                    border: 1px solid black;
+                    width: 100%;
+                }
+                td{
+                    text-align: center;
                 }
             }
         }
@@ -221,7 +214,9 @@
         }
         table{
             width: 100%;
-            border-bottom: 1px solid lightgrey;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 10px;
         }
         .titleRow{
             font-weight: 600;
@@ -255,7 +250,7 @@
         <div class="mainContainer__menu">
             <h2 class="ioio">AoPiCS</h2>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/dealsList" class="links">Сделки</a></h4></div>
-            <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/tasks" class="links">Задачи</a></h4></div>
+            <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/tasks" class="links">Работы</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/storage" class="links">Склад</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4><a href="/AoPiCS/clients" class="links">Клиенты</a></h4></div>
             <div class="mainContainer__menu__menuItem"><h4>Календарь</h4></div>

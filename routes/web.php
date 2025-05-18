@@ -24,14 +24,6 @@ Route::get('/AoPiCS', function () {
     return view('AoPiCS');
 });
 
-Route::get('/AoPiCS/dealsList', function () {
-    return view('../sections/dealsList');
-});
-
-Route::get('/AoPiCS/dealsList/deals', function () {
-    return view('../sections/deals');
-});
-
 Route::get('/registration', function () {
     return view('registration');
 });
@@ -68,5 +60,12 @@ Route::post('/AoPiCS/tasks/add', [TasksController::class, 'store'])->name('tasks
 Route::get('/AoPiCS/tasks/{task}/deleteEntry', [TasksController::class, 'deleteEntry'])->name('tasks.deleteEntry');
 Route::get('/AoPiCS/tasks/{task}/edit', [TasksController::class, 'edit'])->name('tasks.edit');
 Route::post('/AoPiCS/tasks/{task}/editEntry', [TasksController::class, 'editEntry'])->name('tasks.editEntry');
+Route::get('/AoPiCS/tasks/search', [TasksController::class, 'search'])->name('tasks.search');
 //Deals
+Route::get('/AoPiCS/dealsList/addNewDeal', [DealsController::class, 'addNewDeal'])->name('deals.addNewDeal');
+Route::post('/AoPiCS/dealsList/add', [DealsController::class, 'store'])->name('deals.store');
 Route::get('/AoPiCS/dealsList/search', [DealsController::class, 'search'])->name('deals.search');
+Route::get('/AoPiCS/dealsList', [DealsController::class, 'showDealsList'])->name('deals.showDealsList');
+Route::get('/AoPiCS/dealsList/{deal}', [DealsController::class, 'showDeal'])->name('deals.showDeal');
+Route::post('/signupformaintenance/add', [DealsController::class, 'createDealByClient'])->name('deals.createDealByClient');
+Route::get('/AoPiCS/dealsList/{deal}/deleteEntry', [DealsController::class, 'deleteEntry'])->name('deals.deleteEntry');
