@@ -18,7 +18,6 @@
             <tr class="titleRow">
                 <td>Номер сделки</td>
                 <td>Наименование работы</td>
-                <td>Дата создания</td>
                 <td>Статус</td>
                 <td>Исполнитель</td>
             </tr>
@@ -26,7 +25,6 @@
                 <tr>
                     <td><a href="/AoPiCS/dealsList/{{$deal->deal_number}}">{{$deal->deal_number}}</a></td>
                     <td>{{$deal->tasks_work_name}}</td>
-                    <td>{{$deal->deal_creation_date}}</td>
                     <td>{{$deal->deal_status}}</td>
                     <td>{{$deal->tasks_executor}}</td>
                     <td>

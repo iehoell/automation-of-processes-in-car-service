@@ -66,3 +66,6 @@ Route::get('/AoPiCS/dealsList/{deal}/deleteEntry', [DealsController::class, 'del
 Route::get('/AoPiCS/calendar', [CalendarController::class, 'showAll'])->name('calendar.showAll');
 Route::get('/signupformaintenance', [CalendarController::class, 'addNewRecord'])->name('calendar.addNewRecord');
 Route::get('/AoPiCS/calendar/search', [CalendarController::class, 'search'])->name('calendar.search');
+Route::get('/AoPiCS/calendar/{deal}/deleteEntry', [CalendarController::class, 'deleteEntry'])->name('calendar.deleteEntry');
+Route::get('/AoPiCS/calendar/{task}/edit', [CalendarController::class, 'edit'])->name('calendar.edit');
+Route::post('/AoPiCS/calendar/{task}/editEntry', [CalendarController::class, 'editEntry'])->name('calendar.editEntry');
