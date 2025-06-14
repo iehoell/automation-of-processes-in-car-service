@@ -47,6 +47,9 @@
         .mainContainer__profile{
             display: flex;
             flex-wrap: nowrap;
+            @media (max-width: 768px) {
+                display: block;
+            }
             .input-box {
                 /* родительский блок относительно которого будем формировать положение
                 тега label */
@@ -127,7 +130,44 @@
             border: 1px solid black;
             border-radius: 15px;
             padding: 15px;
-            width: min-content;
+            width: max-content;
+        }
+        @media (max-width: 768px) {
+            .mainContainer__history table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .mainContainer__history .titleRow {
+                display: none; /* Скрываем заголовки */
+            }
+
+            .mainContainer__history tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            .mainContainer__history td {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0;
+                text-align: right;
+            }
+
+            .mainContainer__history td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-align: left;
+                margin-right: 10px;
+            }
+
+            .mainContainer__history h2 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
         }
     </style>
     <body>
@@ -136,24 +176,26 @@
             <div class="mainContainer__profile">
                 <div class="input-box">
                     <label>Автомобиль</label>
-                    <input type="text"  value="{{$_SESSION['auto']}}">
+                    <input type="text"  value="{{$_SESSION['auto']}}" readonly>
                 </div>
                 <div class="input-box">
                     <label>Гос. номер</label>
-                    <input type="text"  value="{{$_SESSION['auto_number']}}">
+                    <input type="text"  value="{{$_SESSION['auto_number']}}" readonly>
                 </div>
                 <div class="input-box">
                     <label>Номер телефона</label>
-                    <input type="text"  value="{{$_SESSION['telephone_number']}}">
+                    <input type="text"  value="{{$_SESSION['telephone_number']}}" readonly>
                 </div>
                 <div class="input-box">
                     <label>Электронная почта</label>
-                    <input type="text" value="{{$_SESSION['email']}}">
+                    <input type="text" value="{{$_SESSION['email']}}" readonly>
                 </div>
             </div>
             <div class="mainContainer__currentRecord">
                 <h2>Ваша запись</h2>
-                <div class="mainContainer__currentRecordText">??? в ???</div>
+                @foreach($calendar as $calendar_item)
+                    <div class="mainContainer__currentRecordText">{{$calendar_item->recording_date}} в {{$calendar_item->recording_time}}</div>
+                @endforeach
             </div>
             <div class="mainContainer__history">
                 <h2>История сделок</h2>
@@ -167,12 +209,12 @@
                         <td>Стоимость</td>
                     </tr>
                     <tr>
-                        <td>Замена сальника привода</td>
-                        <td>Кислов Анатолий</td>
-                        <td>1 час(-ов)</td>
-                        <td>1000₽</td>
-                        <td>50₽</td>
-                        <td>950₽</td>
+                        <td data-label="Наименование">Замена сальника привода</td>
+                        <td data-label="Исполнитель">Кислов Анатолий</td>
+                        <td data-label="Норма времени">1 час(-ов)</td>
+                        <td data-label="Без скидки">1000₽</td>
+                        <td data-label="Скидка">50₽</td>
+                        <td data-label="Стоимость">950₽</td>
                     </tr>
                 </table>
             </div>

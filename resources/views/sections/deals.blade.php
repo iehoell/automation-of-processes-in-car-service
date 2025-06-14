@@ -34,18 +34,16 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>{{$deal_item->tasks_work_name}}</td>
-                        <td>{{$deal_item->tasks_executor}}</td>
-                        <td>{{$deal_item->tasks_work_time}} час(-ов)</td>
-                        <td>{{$deal_item->tasks_total}}₽</td>
-                        <td>
-                            <button>
-                                <img src="https://cdn-icons-png.flaticon.com/512/61/61099.png" width="20px" height="20px">
-                            </button>
-                        </td>
-                        <td>
+                        <td data-label="Наименование">{{$deal_item->tasks_work_name}}</td>
+                        <td data-label="Исполнитель">{{$deal_item->tasks_executor}}</td>
+                        <td data-label="Норма времени">{{$deal_item->tasks_work_time}} час(-ов)</td>
+                        <td data-label="Итого">{{$deal_item->tasks_total}}₽</td>
+                        <td></td>
+                        <td></td>
+                        <td data-label="Изменить">
                             <button>
                                 <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782.png" width="20px" height="20px"/>
                             </button>
@@ -66,16 +64,17 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>{{$deal_item->storage_name}}</td>
-                        <td>4</td>
-                        <td>{{$deal_item->storage_purshase_price}}</td>
-                        <td>{{$deal_item->storage_sale_price}}</td>
-                        <td>
-                            <button>
-                                <img src="https://cdn-icons-png.flaticon.com/512/61/61099.png" width="20px" height="20px">
-                            </button>
-                        </td>
+                        <td data-label="№">1</td>
+                        <td data-label="Наименование">{{$deal_item->storage_name}}</td>
+                        <td data-label="Кол-во">4</td>
+                        <td data-label="Цена закупки">{{$deal_item->storage_purshase_price}}</td>
+                        <td data-label="Цена продажи">{{$deal_item->storage_sale_price}}</td>
+                        <td></td>
+{{--                        <td>--}}
+{{--                            <button>--}}
+{{--                                <img src="https://cdn-icons-png.flaticon.com/512/61/61099.png" width="20px" height="20px">--}}
+{{--                            </button>--}}
+{{--                        </td>--}}
                         <td>
                             <button>
                                 <img src="https://cdn.icon-icons.com/icons2/620/PNG/512/pencil-striped-symbol-for-interface-edit-buttons_icon-icons.com_56782.png" width="20px" height="20px"/>

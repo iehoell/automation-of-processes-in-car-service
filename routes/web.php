@@ -7,17 +7,10 @@ use App\Http\Controllers\TasksController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DealsController;
+use App\Http\Controllers\CalendarController;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/signupformaintenance', function () {
-    return view('signUpForMaintenance');
-});
-
-Route::get('/profile', function () {
-    return view('userProfile');
 });
 
 Route::get('/AoPiCS', function () {
@@ -69,3 +62,7 @@ Route::get('/AoPiCS/dealsList', [DealsController::class, 'showDealsList'])->name
 Route::get('/AoPiCS/dealsList/{deal}', [DealsController::class, 'showDeal'])->name('deals.showDeal');
 Route::post('/signupformaintenance/add', [DealsController::class, 'createDealByClient'])->name('deals.createDealByClient');
 Route::get('/AoPiCS/dealsList/{deal}/deleteEntry', [DealsController::class, 'deleteEntry'])->name('deals.deleteEntry');
+//Calendar
+Route::get('/AoPiCS/calendar', [CalendarController::class, 'showAll'])->name('calendar.showAll');
+Route::get('/signupformaintenance', [CalendarController::class, 'addNewRecord'])->name('calendar.addNewRecord');
+Route::get('/AoPiCS/calendar/search', [CalendarController::class, 'search'])->name('calendar.search');

@@ -51,20 +51,19 @@ if (session_status() === PHP_SESSION_NONE) {
             padding: 10px;
         }
     </style>
-    {{$tasks = DB::table('tasks')->get('work_name')}}
     <body>
     <div class="mainContainer1">
         <form action="/signupformaintenance/add" method="POST">
             @csrf
             <h3>Введите свои данные, чтобы записаться на техосмотр</h3>
             <h4>ФИО</h4>
-            <input type="text" name="FIO" value="{{$_SESSION['FIO']}}"/>
+            <input type="text" name="FIO" value="{{$_SESSION['FIO']}}" readonly/>
             <h4>Автомобиль</h4>
-            <input type="text" name="Auto" value="{{$_SESSION['auto']}}"/>
+            <input type="text" name="Auto" value="{{$_SESSION['auto']}}" readonly/>
             <h4>Гос. номер автомобиля</h4>
-            <input type="text" name="Auto_number" maxlength="6" size="6" value="{{$_SESSION['auto_number']}}"/>
+            <input type="text" name="Auto_number" maxlength="6" size="6" value="{{$_SESSION['auto_number']}}" readonly/>
             <h4>Номер телефона</h4>
-            <input type="tel" name="phone_number" value="{{$_SESSION['telephone_number']}}"/>
+            <input type="tel" name="phone_number" value="{{$_SESSION['telephone_number']}}" readonly/>
             <h4>Время записи</h4>
             <input type="datetime-local" name="recording_date" max="2026-06-24T00:00"/>
             <h4>Тип работ</h4>
