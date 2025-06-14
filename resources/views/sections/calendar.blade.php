@@ -15,11 +15,6 @@
                 <input type="search" name="search-text" />
                 <button>Найти</button>
             </form>
-{{--            <a href="/AoPiCS/clients/addNewClient">--}}
-{{--                <button class="clientsBlock__addNewClient">--}}
-{{--                    +--}}
-{{--                </button>--}}
-{{--            </a>--}}
         </div>
     <table>
         <tr>
@@ -40,6 +35,7 @@
                 <td>{{$calendar_item->client_fio}}</td>
                 <td>{{$calendar_item->recording_date}}</td>
                 <td>{{$calendar_item->recording_time}}</td>
+                <td>{{$calendar_item->auto}}</td>
                 <td>{{$calendar_item->auto_number}}</td>
                 <td>{{$calendar_item->phone_number}}</td>
                 <td>{{$calendar_item->work_type}}</td>
