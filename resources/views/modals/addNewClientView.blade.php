@@ -37,7 +37,7 @@
             <h3>Форма создания новой записи</h3>
             <input type="text" name="FIO" placeholder="Фио"/>
             <input type="text" name="Auto" placeholder="Автомобиль"/>
-            <input type="text" name="Auto_number" placeholder="Номер автомобиля"/>
+            <input type="text" name="Auto_number" placeholder="Номер автомобиля типа А123БВ45" pattern="[АВЕКМНОРСТУХ]{1}\d{3}[АВЕКМНОРСТУХ]{2}\d{2,3}"/>
             <input type="date" name="Registration_date" placeholder="Дата регистрации"/>
             <input type="tel" name="Telephone_number" placeholder="Номер телефона"/>
             <input type="number" name="Discount_on_services" placeholder="Скидка на услуги"/>

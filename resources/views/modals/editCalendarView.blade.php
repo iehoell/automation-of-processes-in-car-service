@@ -47,7 +47,7 @@
         <h4>ФИО</h4>
         <input type="text" name="FIO" value="{{$calendar->client_fio}}" readonly/>
         <h4>Автомобиль</h4>
-        <input type="text" name="Auto" value="{{$calendar->auto}}" readonly/>
+        <input type="text" name="Auto" placeholder="Номер автомобиля типа А123БВ45" pattern="[АВЕКМНОРСТУХ]{1}\d{3}[АВЕКМНОРСТУХ]{2}\d{2,3}" value="{{$calendar->auto}}" readonly/>
         <h4>Гос. номер автомобиля</h4>
         <input type="text" name="Auto_number" maxlength="6" size="6" value="{{$calendar->auto_number}}" readonly/>
         <h4>Номер телефона</h4>

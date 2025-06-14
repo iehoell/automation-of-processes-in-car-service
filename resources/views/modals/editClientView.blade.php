@@ -37,7 +37,7 @@
             <h3>Форма изменения записи</h3>
             <input type="text" name="FIO" placeholder="Фио" value='{{$client->FIO}}'/>
             <input type="text" name="Auto" placeholder="Автомобиль" value='{{$client->Auto}}'/>
-            <input type="text" name="Auto_number" placeholder="Номер автомобиля" value='{{$client->Auto_number}}'/>
+            <input type="text" name="Auto_number" placeholder="Номер автомобиля типа А123БВ45" pattern="[АВЕКМНОРСТУХ]{1}\d{3}[АВЕКМНОРСТУХ]{2}\d{2,3}" value='{{$client->Auto_number}}'/>
             <input type="date" name="Registration_date" placeholder="Дата регистрации" value='{{$client->Registration_date}}'/>
             <input type="tel" name="Telephone_number" placeholder="Номер телефона" value='{{$client->Telephone_number}}'/>
             <input type="number" name="Discount_on_services" placeholder="Скидка на услуги" value='{{$client->Discount_on_services}}'/>

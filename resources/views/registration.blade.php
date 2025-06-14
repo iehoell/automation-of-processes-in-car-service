@@ -58,7 +58,7 @@
                 <input type="password" name="password" placeholder="Пароль"/>
                 <input type="tel" name="phone" placeholder="Номер телефона"/>
                 <input type="text" name="Auto" placeholder="Автомобиль"/>
-                <input type="text" name="Auto_number" placeholder="Гос номер"/>
+                <input type="text" name="Auto_number" placeholder="Номер автомобиля типа А123БВ45" pattern="[АВЕКМНОРСТУХ]{1}\d{3}[АВЕКМНОРСТУХ]{2}\d{2,3}"/>
                 <a href="/login" class="toLoginLink">Уже есть аккаунт? Войдите сейчас.</a>
                 <button type="submit">
                     Зарегистрироваться

@@ -61,7 +61,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <h4>Автомобиль</h4>
             <input type="text" name="Auto" value="{{$_SESSION['auto']}}" readonly/>
             <h4>Гос. номер автомобиля</h4>
-            <input type="text" name="Auto_number" maxlength="6" size="6" value="{{$_SESSION['auto_number']}}" readonly/>
+            <input type="text" name="Auto_number" value="{{$_SESSION['auto_number']}}" readonly/>
             <h4>Номер телефона</h4>
             <input type="tel" name="phone_number" value="{{$_SESSION['telephone_number']}}" readonly/>
             <h4>Время записи</h4>
